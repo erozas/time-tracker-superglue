@@ -55,3 +55,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+
+gem "turbo-rails"
+gem "stimulus-rails"
+gem "superglue"
+gem "vite_rails"

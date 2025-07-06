@@ -1,0 +1,7 @@
+json.body do
+  json.greet "Hello world"
+end
+
+json.title "This is the title"
+
+json.footer "Made with hearts"
