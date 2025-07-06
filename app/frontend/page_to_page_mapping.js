@@ -30,7 +30,7 @@
 //
 
 const pageIdentifierToPageComponent = {}
-const pages = import.meta.glob("../views/**/*.jsx", { eager: true })
+const pages = import.meta.glob('../views/**/*.jsx', { eager: true })
 
 for (const key in pages) {
   if (pages.hasOwnProperty(key)) {

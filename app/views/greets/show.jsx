@@ -12,7 +12,7 @@ export default function GreetsShow() {
 
   return (
     <>
-      <h1>{greet}</h1>
+      <h1>{greet} and september</h1>
       <p>{title}</p>
       <span>{footer}</span>
     </>

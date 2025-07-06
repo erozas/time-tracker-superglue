@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
 @source "../../../app/views/**/*.html.erb";
+@source "../../../app/views/**/*.jsx";
 @source "../../../app/views/**/*.rb";
 @source "../../../app/helpers/**/*.rb";
+
+@theme {
+  --color-dodger-50: #eff7ff;
+  --color-dodger-100: #dcecfd;
+  --color-dodger-200: #c0defd;
+  --color-dodger-300: #95cafb;
+  --color-dodger-400: #63adf7;
+  --color-dodger-500: #408df2;
+  --color-dodger-600: #296fe7;
+  --color-dodger-700: #2159d4;
+  --color-dodger-800: #2149ac;
+  --color-dodger-900: #204188;
+  --color-dodger-950: #182953;
+
+  --color-neutral-50: #FAFBFD;
+  --color-neutral-100: #F5F6F8;
+  --color-neutral-200: #E4E8EF;
+  --color-neutral-300: #DDE1E8;
+  --color-neutral-400: #CCD2DC;
+  --color-neutral-500: #B2B9C3;
+  --color-neutral-600: #868d98;
+  --color-neutral-700: #5E636B;
+  --color-neutral-800: #44484F;
+  --color-neutral-900: #232529;
+  --color-neutral-black: #030D1D;
+
+  --color-indigo-50: #f3e6f9;
+  --color-indigo-100: #f1d5ff;
+  --color-indigo-200: #dfb1f6;
+  --color-indigo-300: #d391f3;
+  --color-indigo-400: #c165ed;
+  --color-indigo-500: #a936e1;
+  --color-indigo-600: #8c2cba;
+  --color-indigo-700: #6f328d;
+  --color-indigo-800: #4f1e67;
+  --color-indigo-900: #2c1338;
+  --color-indigo-950: #1f0f29;
+
+  --color-lime-50: #eefde8;
+  --color-lime-100: #d8facd;
+  --color-lime-200: #b4f6a0;
+  --color-lime-300: #7eec5f;
+  --color-lime-400: #5ee03b;
+  --color-lime-500: #3dc61c;
+  --color-lime-600: #2a9e12;
+  --color-lime-700: #227813;
+  --color-lime-800: #205f15;
+  --color-lime-900: #1e5116;
+  --color-lime-950: #0a2d06;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
