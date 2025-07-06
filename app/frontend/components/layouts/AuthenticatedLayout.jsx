@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import Navbar from './navigation/Navbar'
+import Navbar from '@components/navigation/Navbar'
 
-export const Layout = ({ children }) => {
+export const AuthenticatedLayout = ({ children }) => {
   const flash = useSelector((state) => state.flash)
 
   return (

@@ -1,2 +1,2 @@
-export * from "./Layout"
+export * from "./layouts/Layout"
 export * from "./Inputs"

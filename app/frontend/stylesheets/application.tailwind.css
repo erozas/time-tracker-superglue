@@ -2,8 +2,6 @@
 
 @source "../../../app/views/**/*.html.erb";
 @source "../../../app/views/**/*.jsx";
-@source "../../../app/views/**/*.rb";
-@source "../../../app/helpers/**/*.rb";
 
 @theme {
   --color-dodger-50: #eff7ff;

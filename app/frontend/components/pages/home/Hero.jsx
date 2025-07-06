@@ -13,11 +13,6 @@ export default function Hero() {
       <Container>
         <div className="relative z-10 py-12 px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-indigo-200/50 rounded-full px-3 py-1 mb-6">
-              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
-              <span className="text-xs font-medium text-slate-600">Don't lose track again</span>
-            </div>
-
             <h1 className="text-3xl lg:text-5xl font-bold text-indigo-900 mb-2 leading-12">
               Simple and Accurate<span className="text-indigo-600">Time Tracking for freelancers</span>
             </h1>
