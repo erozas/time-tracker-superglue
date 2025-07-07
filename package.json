@@ -13,6 +13,7 @@
     "@hotwired/turbo-rails": "^8.0.16",
     "@reduxjs/toolkit": "^2.8.2",
     "@thoughtbot/superglue": "^1.0.2",
+    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
