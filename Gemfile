@@ -56,6 +56,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem "friendly_id"
 
 gem "turbo-rails"
 gem "stimulus-rails"
