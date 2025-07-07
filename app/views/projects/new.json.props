@@ -1,0 +1,7 @@
+json.new_project_form do
+  form_props do |f|
+    f.text_field :name, label: "Name"
+    f.text_field :description, label: "Description"
+    f.submit "Create Project"
+  end
+end
