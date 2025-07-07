@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include Authentication
   # Enables Superglue rendering defaults for sensible view directories.
   #
   # without `use_jsx_rendering_defaults`:
