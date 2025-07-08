@@ -1,6 +1,9 @@
 path = request.format.json? ? param_to_dig_path(params[:props_at]) : nil
 
 json.data(dig: path) do
+  json.user partial: ['users/user', fragment: true] do
+  end
+
   yield json
 end
 
