@@ -1,21 +1,29 @@
 import React from 'react'
+import { useContent } from "@thoughtbot/superglue"
 import { Layout } from '@components/layouts/Layout'
 import Container from '@components/Container'
-import { Form, TextField } from '@components/Inputs'
-import { useContent, Navigationcontext } from "@thoughtbot/superglue"
+import { Form, FieldBase, SubmitButton } from '@components/Inputs'
 
 
 export default function SessionsNew() {
+  const { form, extras, inputs } = useContent().login_form
+
   return (
     <Layout>
       <Container>
-        <h1>Sign in</h1>
-
-        <Form action={"/session"} method="post">
-          <TextField label="Email" className="px-3 py-2 border border-slate-200 rounded-md" errorKey="email_address" />
-          <TextField label="Password" className="px-3 py-2 border border-slate-200 rounded-md" errorKey="password" />
-          <button type="submit">Sign in</button>
-        </Form>
+        <div className="max-w-lg mx-auto border border-gray-300 rounded-lg p-8 mt-16 mb-24">
+          <h1 className="text-2xl font-bold">Sign in</h1>
+          <p className="text-base text-slate-500 mb-4">
+            Enter your email address and password to sign in.
+          </p>
+          <Form {...form} extras={extras} className="flex flex-col">
+            <div className="flex flex-col space-y-2">
+              <FieldBase {...inputs.emailAddress} label="Email address" className="px-3 py-2 border border-gray-300 rounded-lg" />
+              <FieldBase {...inputs.password} label="Password" className="px-3 py-2 border border-gray-300 rounded-lg" />
+              <SubmitButton text="Sign in" className="bg-indigo-700 text-white font-semibold mt-6 py-2 px-6 rounded-full" />
+            </div>
+          </Form>
+        </div>
       </Container>
     </Layout>
   )

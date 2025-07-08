@@ -1,0 +1,9 @@
+json.login_form do
+  form_props(url: session_path) do |f|
+    f.text_field :email_address
+    f.password_field :password
+    f.submit
+  end
+
+  json.errors @user.errors.to_hash(true)
+end
