@@ -1,21 +1,23 @@
 class ProjectsController < ApplicationController
   before_action :use_jsx_rendering_defaults
-  allow_unauthenticated_access only: [:index, :new, :create]
 
   def index
     @projects = Project.all
   end
 
   def new
+    @project = Project.new
   end
 
   def create
     @project = Project.new(project_params)
 
-    if @project.save!
+    if @project.save
       redirect_to projects_path, notice: "Project created successfully"
     else
-      render :new, status: :unprocessable_entity
+      response.set_header("content-location", new_project_path)
+      flash.now[:alert] = "There was an error creating your project"
+      render :new  
     end
   end
 
