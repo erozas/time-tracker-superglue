@@ -1,0 +1,3 @@
+json.dashboard do
+  json.data @dashboard_data
+end
