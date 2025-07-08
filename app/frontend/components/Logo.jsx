@@ -1,10 +1,13 @@
 import React from 'react'
-import PomodoroIcon from '@assets/pomodoro.svg'
+import { AlarmClock } from 'lucide-react'
 
 export default function Logo() {
   return (
-    <div>
-      <h1 className="text-white font-bold text-lg tracking-wide">Pomoflow</h1>
-    </div>
+    <a href="/" data-sg-visit>
+      <h1 className="text-indigo-300 font-bold text-2xl tracking-wide flex items-center">
+        <AlarmClock className="w-6 h-6 mr-2" />
+        Pomoflow
+      </h1>
+    </a>
   )
 }

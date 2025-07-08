@@ -63,7 +63,7 @@ export const Form = ({ extras, validationErrors = {}, children, ...props }) => {
  */
 export const FieldError = ({ errorKey }) => {
   const errorMessage = useErrorMessage(errorKey)
-  return <span>{errorMessage}</span>
+  return <span className="text-rose-400 text-sm">{errorMessage}</span>
 }
 /**
  * A Field component.
