@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   resource :greet, only: [:show]
   resources :projects
+  resources :dashboard, only: [:index]
+  
   root "pages#home"
 end
