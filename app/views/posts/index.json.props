@@ -1,0 +1,11 @@
+json.posts do
+  json.array! @posts do |post|
+    json.id post.id
+    json.title post.title
+    json.slug post.slug
+    json.excerpt post.excerpt.truncate(90)
+    json.url blog_post_url(post)
+  end
+end
+
+json.componentIdentifier "posts/index"

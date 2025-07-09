@@ -1,0 +1,9 @@
+json.post do
+  json.id @post.id
+  json.title @post.title
+  json.excerpt @post.excerpt
+  json.slug @post.slug
+  json.body @post.formatted_body.to_html
+end
+
+json.componentIdentifier "posts/show"
