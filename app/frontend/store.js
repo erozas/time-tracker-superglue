@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit"
 import { useDispatch, useSelector, useStore } from "react-redux"
 import { flashSlice } from "./slices/flash"
+import { userSlice } from "./slices/user"
 import {
   beforeVisit,
   beforeFetch,
@@ -21,7 +22,8 @@ export const store = configureStore({
   reducer: {
     superglue,
     pages,
-    flash: flashSlice.reducer
+    flash: flashSlice.reducer,
+    user: userSlice.reducer
   }
 })
 
