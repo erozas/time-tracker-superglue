@@ -29,14 +29,16 @@
 // ```
 //
 
-const pageIdentifierToPageComponent = {}
-const pages = import.meta.glob('../views/**/*.jsx', { eager: true })
+import Home from '../views/pages/home'
+import DashboardIndex from '../views/dashboard/index'
+import ProjectIndex from '../views/projects/index'
+import ProjectNew from '../views/projects/new'
+import SessionNew from '../views/sessions/new'
 
-for (const key in pages) {
-  if (pages.hasOwnProperty(key)) {
-    const identifier = key.replace("../views/", "").split('.')[0];
-    pageIdentifierToPageComponent[identifier] = pages[key].default;
-  }
-}
-
-export { pageIdentifierToPageComponent }
+export const pageIdentifierToPageComponent = {
+  "pages/home": Home,
+  "session/new": SessionNew,
+  "dashboard/index": DashboardIndex,
+  "projects/index": ProjectIndex,
+  "projects/new": ProjectIndex,
+};
