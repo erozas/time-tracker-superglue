@@ -1,11 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Logo from '@components/Logo'
 import { Folder, List, Settings, LogOut } from 'lucide-react'
-import { useContent } from '@thoughtbot/superglue'
 import { Form } from '@components/Inputs'
 
 export default function AppSidebar() {
-  const { user } = useContent()
+  const user = useSelector((state) => state.user)
   const { form, extras } = user.sign_out_form
 
   return (

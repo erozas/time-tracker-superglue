@@ -3,13 +3,12 @@ import Container from '@components/Container'
 import Logo from '@components/Logo'
 import { useContent } from '@thoughtbot/superglue'
 import { Form, SubmitButton } from '@components/Inputs'
+import { useSelector } from 'react-redux'
 
 export default function Navbar() {
-  const { user } = useContent()
+  const user = useSelector((state) => state.user)
+  const signedIn = user.is_authenticated
   const { form, extras } = user.sign_out_form
-  const signedIn = user?.is_authenticated
-
-  console.log(useContent())
 
   return (
     <nav className="bg-indigo-950">
@@ -38,6 +37,6 @@ export default function Navbar() {
           </div>
         </ul>
       </Container>
-    </nav >
+    </nav>
   )
 }
