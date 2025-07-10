@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import Logo from '@components/Logo'
-import { Folder, List, Settings, LogOut } from 'lucide-react'
-import { Form } from '@components/Inputs'
+import Logo from '../Logo'
+import { Folder, List, Settings, LogOut, Newspaper } from 'lucide-react'
+import { Form } from '../Inputs'
 
 export default function AppSidebar() {
   const user = useSelector((state) => state.user)
@@ -33,6 +33,16 @@ export default function AppSidebar() {
             >
               <List className="w-5 h-5 mr-3" />
               Projects
+            </a>
+          </li>
+          <li className="px-4 py-2 hover:bg-indigo-800">
+            <a
+              href="/posts"
+              data-sg-visit
+              className="flex items-center py-2 text-indigo-200 rounded-lg transition-colors"
+            >
+              <Newspaper className="w-5 h-5 mr-3" />
+              Posts
             </a>
           </li>
           <li className="px-4 py-2 hover:bg-indigo-800">

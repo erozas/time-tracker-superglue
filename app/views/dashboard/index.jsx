@@ -1,17 +1,18 @@
 import React from 'react'
 import { useContent } from '@thoughtbot/superglue'
-import { AppLayout } from '@components/layouts/AppLayout'
+import { AppLayout } from '../../frontend/components/layouts/AppLayout'
 import { Folder, Clock, DollarSign, TrendingUp } from 'lucide-react'
+import { useSelector } from 'react-redux'
 import {
   TimeTrackingChart,
   EarningsChart,
   ProjectDistributionChart,
   DailyHoursChart,
   StatsCard
-} from '@components/charts'
+} from '../../frontend/components/charts'
 
 export default function DashboardIndex() {
-  const user = useContent().user
+  const user = useSelector((state) => state.user)
   const data = useContent().dashboard.data
 
   return (

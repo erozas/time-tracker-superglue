@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout } from '@components/layouts/Layout'
-import Hero from '@components/pages/home/Hero'
+import { Layout } from '../../frontend/components/layouts/Layout'
+import Hero from '../../frontend/components/pages/home/Hero'
 
 export default function Home() {
   return (

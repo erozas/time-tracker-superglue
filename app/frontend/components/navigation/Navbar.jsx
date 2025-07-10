@@ -1,8 +1,7 @@
 import React from 'react'
-import Container from '@components/Container'
-import Logo from '@components/Logo'
-import { useContent } from '@thoughtbot/superglue'
-import { Form, SubmitButton } from '@components/Inputs'
+import Container from '../Container'
+import Logo from '../Logo'
+import { Form, SubmitButton } from '../Inputs'
 import { useSelector } from 'react-redux'
 
 export default function Navbar() {

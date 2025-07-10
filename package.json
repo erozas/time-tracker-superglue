@@ -2,10 +2,14 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
     "@tailwindcss/vite": "^4.1.11",
     "@vitejs/plugin-react": "^4.6.0",
+    "esbuild": "^0.25.6",
+    "esbuild-plugin-polyfill-node": "^0.3.0",
     "tailwindcss": "^4.1.11",
     "vite": "^5.4.19",
+    "vite-plugin-node-polyfills": "^0.24.0",
     "vite-plugin-ruby": "^5.1.1"
   },
   "dependencies": {
@@ -19,6 +23,15 @@
     "react-apexcharts": "^1.7.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "tailwind-variants": "^1.0.0"
+    "source-map-support": "^0.5.21",
+    "tailwind-variants": "^1.0.0",
+    "text-encoding": "^0.7.0",
+    "whatwg-url": "^14.2.0"
+  },
+  "scripts": {
+    "build:web": "vite build",
+    "build:server": "vite build --config vite.config.server.ts",
+    "build": "yarn build:web && yarn build:ssr",
+    "dev": "concurrently \"vite dev\" \"node build-ssr.mjs --watch\""
   }
 }

@@ -1,0 +1,2 @@
+import{R as o,A as n,p as a,s as i,b as p}from"../store-DMtOeiLC.js";import{c as r}from"../client-DwUvAHKY.js";typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const t=document.getElementById("app"),e=window.location;t&&r.createRoot(t).render(o.createElement(n,{baseUrl:e.origin,initialPage:window.SUPERGLUE_INITIAL_PAGE_STATE,path:e.pathname+e.search+e.hash,buildVisitAndRemote:p,store:i,mapping:a}))});
+//# sourceMappingURL=application.jsx-IYZOOHd2.js.map

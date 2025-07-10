@@ -27,6 +27,16 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS", 3)
 threads threads_count, threads_count
 
+workers ENV.fetch("WEB_CONCURRENCY") { 1 }
+
+on_worker_boot do
+  Humid.create_context
+end
+
+on_worker_shutdown do
+  Humid.dispose
+end
+
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 port ENV.fetch("PORT", 3000)
 

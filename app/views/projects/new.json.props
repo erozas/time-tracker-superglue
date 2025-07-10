@@ -5,5 +5,9 @@ json.new_project_form do
     f.submit
   end
 
+  json.createProjectModal do
+    json.greeting "Hello From the Modal"
+  end
+
   json.errors @project.errors.to_hash(true)
 end

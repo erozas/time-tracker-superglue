@@ -58,6 +58,7 @@ end
 
 gem "commonmarker"
 gem "friendly_id"
+gem "humid"
 
 gem "turbo-rails"
 gem "stimulus-rails"

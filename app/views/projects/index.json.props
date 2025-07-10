@@ -5,3 +5,9 @@ json.projects do
     json.url project_path(project)
   end
 end
+
+json.newProjectPath new_project_path(props_at: 'data.createProjectModal')
+
+json.createProjectModal do
+  json.greeting "Hello From the Modal"
+end

@@ -16,4 +16,8 @@ export default defineConfig({
     RubyPlugin(),
     tailwindcss(),
   ],
+  build: {
+    outDir: "public/build",
+    sourcemap: true,
+  },
 })

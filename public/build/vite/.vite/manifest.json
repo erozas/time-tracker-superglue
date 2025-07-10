@@ -1,0 +1,51 @@
+{
+  "_client-Oe0wq6xA.js": {
+    "file": "assets/client-Oe0wq6xA.js",
+    "name": "client",
+    "imports": [
+      "_store-CC-lEHOC.js"
+    ]
+  },
+  "_store-CC-lEHOC.js": {
+    "file": "assets/store-CC-lEHOC.js",
+    "name": "store"
+  },
+  "application.jsx": {
+    "file": "server_rendering.js",
+    "name": "application",
+    "src": "application.jsx",
+    "isEntry": true,
+    "imports": [
+      "_store-CC-lEHOC.js",
+      "_client-Oe0wq6xA.js"
+    ]
+  },
+  "entrypoints/application.css": {
+    "file": "assets/entrypoints/application-Bp4br6jj.css",
+    "src": "entrypoints/application.css",
+    "isEntry": true
+  },
+  "entrypoints/application.jsx": {
+    "file": "server_rendering4.js",
+    "name": "entrypoints/application.jsx",
+    "src": "entrypoints/application.jsx",
+    "isEntry": true,
+    "imports": [
+      "_store-CC-lEHOC.js",
+      "_client-Oe0wq6xA.js"
+    ]
+  },
+  "pomodoro.svg": {
+    "file": "assets/pomodoro-CmvNkw23.svg",
+    "src": "pomodoro.svg"
+  },
+  "server_rendering.jsx": {
+    "file": "server_rendering2.js",
+    "name": "server_rendering",
+    "src": "server_rendering.jsx",
+    "isEntry": true,
+    "imports": [
+      "_store-CC-lEHOC.js"
+    ]
+  }
+}

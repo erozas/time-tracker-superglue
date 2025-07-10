@@ -1,5 +1,5 @@
 import React from "react"
-import { createRoot } from "react-dom/client"
+import { hydrateRoot } from "react-dom/client"
 import { Application } from "@thoughtbot/superglue"
 import { buildVisitAndRemote } from "./application_visit"
 import { pageIdentifierToPageComponent } from "./page_to_page_mapping"
@@ -11,10 +11,8 @@ if (typeof window !== "undefined") {
     const location = window.location
 
     if (appEl) {
-      const root = createRoot(appEl)
-      root.render(
+      hydrateRoot(appEl,
         <Application
-          // The base url prefixed to all calls made by the `visit`
           // and `remote` thunks.
           baseUrl={location.origin}
           // The global var SUPERGLUE_INITIAL_PAGE_STATE is set by your erb

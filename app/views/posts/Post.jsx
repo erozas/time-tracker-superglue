@@ -6,7 +6,7 @@ export default function Post({ post }) {
       key={post.id}
       className="col-span-12 md:col-span-6 lg:col-span-4 border-b border-gray-100 pb-12 last:border-b-0"
     >
-      <h2 className="text-2xl font-semibold text-gray-900 mb-4 hover:text-blue-600 transition-colors">
+      <h2 className="text-2xl font-semibold text-gray-900 mb-4 hover:text-indigo-700 transition-colors">
         <a href={post.url} className="block">
           {post.title}
         </a>

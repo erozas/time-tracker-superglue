@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContent } from '@thoughtbot/superglue'
-import { Layout } from '@components/layouts/Layout'
-import Container from '@components/Container'
-import Link from '@components/ui/Link'
+import { Layout } from '../../frontend/components/layouts/Layout'
+import Container from '../../frontend/components/Container'
+import Link from '../../frontend/components/ui/Link'
 import { ArrowLeftIcon } from 'lucide-react'
 
 export default function PostShow() {

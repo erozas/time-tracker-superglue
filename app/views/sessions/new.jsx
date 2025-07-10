@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContent } from "@thoughtbot/superglue"
-import { Layout } from '@components/layouts/Layout'
-import Container from '@components/Container'
-import { Form, FieldBase, SubmitButton } from '@components/Inputs'
+import { Layout } from '../../frontend/components/layouts/Layout'
+import Container from '../../frontend/components/Container'
+import { Form, FieldBase, SubmitButton } from '../../frontend/components/Inputs'
 
 
 export default function SessionsNew() {

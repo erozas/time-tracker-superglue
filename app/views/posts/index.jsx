@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContent } from '@thoughtbot/superglue'
-import { Layout } from '@components/layouts/Layout'
-import Container from '@components/Container'
+import { Layout } from '../../frontend/components/layouts/Layout'
+import Container from '../../frontend/components/Container'
 import Post from './Post'
 
 export default function PostsIndex() {
