@@ -8,6 +8,7 @@ export default function ProjectsNew() {
   const { form, extras, inputs, errors } = useContent().new_project_form
   const { createProjectModal } = useContent()
 
+  console.log(inputs)
   return (
     <AppLayout>
       <div className="max-w-lg mx-auto border border-gray-300 rounded-lg p-8 mt-16 mb-24">
@@ -16,6 +17,17 @@ export default function ProjectsNew() {
           <div className="flex flex-col space-y-2">
             <FieldBase {...inputs.name} errorKey="name" label="Name" className="px-3 py-2 border border-gray-300 rounded-lg" />
             <TextArea {...inputs.description} placeholder="Describe the project in a few words" label="Description" className="px-3 py-2 border border-gray-300 rounded-lg placeholder:text-sm" />
+            <div className="flex flex-col space-y-2">
+              <h2 className="text-lg font-semibold">Tasks</h2>
+              <div className="flex flex-col space-y-2">
+                {inputs.tasksAttributes.map((task, index) => (
+                  <div className="flex flex-col space-y-2" key={index}>
+                    <FieldBase {...task.title} errorKey="title" placeholder="Task Title" className="px-3 py-2 border border-gray-300 rounded-lg" />
+                    <FieldBase {...task.allotedTime} type="number" errorKey="allotedTime" placeholder="Alloted Time" className="px-3 py-2 border border-gray-300 rounded-lg" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           <SubmitButton text="Create Project" className="bg-indigo-700 text-white font-semibold mt-6 py-2 px-6 rounded-full" />
         </Form>

@@ -25,6 +25,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.expect(project: [:name, :description])
+    params.expect(project: [:name, :description, tasks_attributes: [[:title, :alloted_time]]])
   end
 end
