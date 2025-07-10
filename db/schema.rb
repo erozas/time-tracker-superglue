@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_09_020558) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_10_034850) do
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -50,6 +50,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_09_020558) do
     t.index ["user_id"], name: "index_sessions_on_user_id"
   end
 
+  create_table "tasks", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "name"
+    t.text "description"
+    t.integer "alloted_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_tasks_on_project_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email_address", null: false
     t.string "password_digest", null: false
@@ -63,4 +73,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_09_020558) do
   end
 
   add_foreign_key "sessions", "users"
+  add_foreign_key "tasks", "projects"
 end
