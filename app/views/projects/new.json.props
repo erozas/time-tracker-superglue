@@ -2,6 +2,10 @@ json.new_project_form do
   form_props(model: @project) do |f|
     f.text_field :name
     f.text_area :description
+    f.fields_for @tasks do |task_form|
+      task_form.text_field :name
+      task_form.number_field :alloted_time
+    end
     f.submit
   end
 
