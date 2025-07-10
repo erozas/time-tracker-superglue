@@ -32,7 +32,7 @@
 import Home from '../views/pages/home'
 import DashboardIndex from '../views/dashboard/index'
 import ProjectIndex from '../views/projects/index'
-import ProjectNew from '../views/projects/new'
+import ProjectsNew from '../views/projects/new'
 import SessionNew from '../views/sessions/new'
 import PostIndex from '../views/posts/index'
 import PostShow from '../views/posts/show'
@@ -42,7 +42,7 @@ export const pageIdentifierToPageComponent = {
   "session/new": SessionNew,
   "dashboard/index": DashboardIndex,
   "projects/index": ProjectIndex,
-  "projects/new": ProjectIndex,
+  "projects/new": ProjectsNew,
   "posts/index": PostIndex,
   "posts/show": PostShow,
 };

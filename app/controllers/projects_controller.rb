@@ -6,8 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @projects = Project.all
-    render :index
+    @project = Project.new
   end
 
   def create

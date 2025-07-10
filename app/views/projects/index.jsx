@@ -19,7 +19,6 @@ export default function ProjectsIndex() {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold mb-4">Projects</h1>
           <a href={newProjectPath} data-sg-visit>New Project</a>
-          <Dialog {...createProjectModal} />
         </div>
         <ul className="space-y-4 mt-2">
           {projects.map((project, index) => (
