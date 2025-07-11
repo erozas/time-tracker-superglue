@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Authentication
+  include Pagy::Backend
   helper_method :current_user, :user_signed_in?
   
   # Enables Superglue rendering defaults for sensible view directories.
