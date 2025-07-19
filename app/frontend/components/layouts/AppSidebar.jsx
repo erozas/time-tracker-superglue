@@ -14,7 +14,7 @@ export default function AppSidebar() {
         <div className="p-4">
           <Logo />
         </div>
-        <ul className="space-y-2 border-t border-indigo-800">
+        <ul className="space-y-2">
           <li className="px-4 py-2 hover:bg-indigo-800">
             <a
               href="/dashboard"

@@ -1,5 +1,6 @@
 import React from 'react'
 import AppSidebar from "../layouts/AppSidebar"
+import AppNavbar from "../navigation/AppNavbar"
 import Flash from "../Flash"
 
 export const AppLayout = ({ children }) => {
@@ -8,6 +9,7 @@ export const AppLayout = ({ children }) => {
       <div className="flex">
         <AppSidebar />
         <main className="w-full">
+          <AppNavbar />
           <Flash />
           {children}
         </main>

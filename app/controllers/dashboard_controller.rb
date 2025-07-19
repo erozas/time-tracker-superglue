@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
 
   def index
     @dashboard_data = generate_dashboard_data
+    @projects = Project.search(params[:q])
   end
 
   private

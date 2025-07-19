@@ -13,7 +13,7 @@ import {
 
 export default function DashboardIndex() {
   const user = useSelector((state) => state.user)
-  const data = useContent().dashboard.data
+  const data = useContent().data.dashboard_data
 
   return (
     <AppLayout>
