@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useContent } from '@thoughtbot/superglue'
 import { AppLayout } from '../../frontend/components/layouts/AppLayout'
-import { Plus } from 'lucide-react'
 import Link from '../../frontend/components/ui/Link'
-import { Dialog } from '../../frontend/components/Dialog'
+import Pagination from '../../frontend/components/navigation/Pagination'
 
 export default function ProjectsIndex() {
-  const { projects, newProjectPath, createProjectModal } = useContent()
-  const [isOpen, setIsOpen] = useState(false)
+  const { projects, newProjectPath, pagination } = useContent()
 
-  const handleOpen = () => {
-    setIsOpen(true)
-  }
+  console.log(useContent())
 
   return (
     <AppLayout>
@@ -37,6 +33,7 @@ export default function ProjectsIndex() {
             </li>
           ))}
         </ul>
+        <Pagination pagination={pagination} className="mt-6" />
       </div>
     </AppLayout>
   )

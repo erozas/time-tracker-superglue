@@ -6,6 +6,11 @@ json.projects do
   end
 end
 
+json.pagination do
+  json.prevPage pagy_prev_url(@pagy)
+  json.nextPage pagy_next_url(@pagy)
+end
+
 json.newProjectPath new_project_path
 
 json.createProjectModal do

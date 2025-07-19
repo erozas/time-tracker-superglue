@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :use_jsx_rendering_defaults
 
   def index
-    @projects = Project.all
+    @pagy, @projects = pagy(Project.recent, limit: 6)
   end
 
   def new
@@ -25,6 +25,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.expect(project: [:name, :description, tasks_attributes: [[:title, :alloted_time]]])
+    params.expect(project: [:name, :description, tasks_attributes: [[:title, :alloted_time, :_destroy]]])
   end
 end
