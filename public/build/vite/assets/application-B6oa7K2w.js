@@ -1,2 +1,0 @@
-import{c as n,j as t,A as a,p as i,s,b as p}from"./store-BWpr-TSw.js";typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const o=document.getElementById("app"),e=window.location;o&&n.hydrateRoot(o,t.jsxDEV(a,{baseUrl:e.origin,initialPage:window.SUPERGLUE_INITIAL_PAGE_STATE,path:e.pathname+e.search+e.hash,buildVisitAndRemote:p,store:s,mapping:i},void 0,!1,{fileName:"/Users/erozas/Code/rails/avo/content-apps/pomoworkr/app/frontend/application.jsx",lineNumber:15,columnNumber:9},this))});
-//# sourceMappingURL=application-B6oa7K2w.js.map
