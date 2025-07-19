@@ -7,12 +7,14 @@ import { store } from "./store"
 
 if (typeof window !== "undefined") {
   document.addEventListener("DOMContentLoaded", function () {
-    const appEl = document.getElementById("app")
-    const location = window.location
+    const appEl = document.getElementById("app");
+    const location = window.location;
 
     if (appEl) {
       hydrateRoot(appEl,
         <Application
+          className="full-height"
+          // The base url prefixed to all calls made by the `visit`
           // and `remote` thunks.
           baseUrl={location.origin}
           // The global var SUPERGLUE_INITIAL_PAGE_STATE is set by your erb
@@ -27,7 +29,7 @@ if (typeof window !== "undefined") {
           // Mapping between the page identifier to page component
           mapping={pageIdentifierToPageComponent}
         />
-      )
+      );
     }
-  })
+  });
 }
