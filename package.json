@@ -32,6 +32,6 @@
     "build:web": "vite build",
     "build:server": "vite build --config vite.config.server.ts",
     "build": "yarn build:web && yarn build:ssr",
-    "build:ssr": "node ./build-server.mjs",
+    "build:ssr": "node ./build-server.mjs"
   }
 }
