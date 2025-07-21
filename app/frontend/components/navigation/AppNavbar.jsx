@@ -7,12 +7,13 @@ import { useSelector } from 'react-redux'
 const AppNavbar = () => {
   const { remote } = useContext(NavigationContext)
   const currentPageKey = useSelector(state => state.superglue.currentPageKey)
-  const searchResults = useContent().data.search.results
+  const searchResults = useContent().search?.results || []
 
   const debouncedSearch = useRef(
     debounce((value) => {
-      remote(`/dashboard.json?q=${value}&props_at=data.data.search.results`, {
-        pageKey: currentPageKey
+      remote(`/dashboard?q=${value}&props_at=data.search.results`, {
+        pageKey: currentPageKey,
+        force: true
       })
     }, 250)
   ).current
