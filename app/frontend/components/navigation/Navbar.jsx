@@ -19,7 +19,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4 text-indigo-100">
             <li>
-              <a href="/">Features</a>
+              <a href="/dashboard">Dashboard</a>
             </li>
             <li>
               <a href="/">Pricing</a>
