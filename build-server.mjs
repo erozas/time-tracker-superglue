@@ -9,7 +9,7 @@ await esbuild.build({
     'process.env.NODE_ENV': '"production"',
   },
   sourcemap: true,
-  outfile: 'app/assets/builds/server_rendering.js',
+  outfile: 'public/builds/server_rendering.js',
   logLevel: 'info',
   loader: {
     ".js": "jsx",
