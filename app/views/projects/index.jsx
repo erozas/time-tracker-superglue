@@ -7,8 +7,6 @@ import Pagination from '../../frontend/components/navigation/Pagination'
 export default function ProjectsIndex() {
   const { projects, newProjectPath, pagination } = useContent()
 
-  console.log(useContent())
-
   return (
     <AppLayout>
       <div className="px-8 mt-12 mb-20">
@@ -18,7 +16,7 @@ export default function ProjectsIndex() {
         </div>
         <ul className="space-y-4 mt-2">
           {projects.map((project, index) => (
-            <li key={index.toString()} className="border border-gray-300 rounded-lg p-4">
+            <li key={index.toString()} className="bg-white border border-gray-300 rounded-lg p-4">
               <Link
                 href={project.url}
                 visit
