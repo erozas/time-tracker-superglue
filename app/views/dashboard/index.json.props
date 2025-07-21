@@ -2,13 +2,4 @@ path = param_to_dig_path(params[:props_at])
 
 json.data(dig: path) do
   json.dashboard_data @dashboard_data
-  json.search do
-    json.results do
-      json.array! @projects do |project|
-        json.name project.name
-        json.description project.description
-        json.url project_path(project)
-      end
-    end
-  end
 end
