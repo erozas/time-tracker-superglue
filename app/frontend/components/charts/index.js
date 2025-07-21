@@ -1,5 +1,3 @@
-export { default as TimeTrackingChart } from './TimeTrackingChart'
 export { default as EarningsChart } from './EarningsChart'
-export { default as ProjectDistributionChart } from './ProjectDistributionChart'
 export { default as DailyHoursChart } from './DailyHoursChart'
 export { default as StatsCard } from './StatsCard' 
