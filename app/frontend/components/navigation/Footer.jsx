@@ -60,7 +60,7 @@ export default function Footer() {
               <h4 className="text-lg font-semibold text-slate-900 mb-4">Company</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-slate-500 hover:text-slate-900 transition-colors duration-200 text-sm">About</a></li>
-                <li><a href="#" className="text-slate-500 hover:text-slate-900 transition-colors duration-200 text-sm">Blog</a></li>
+                <li><a href="/blog" className="text-slate-500 hover:text-slate-900 transition-colors duration-200 text-sm">Blog</a></li>
                 <li><a href="#" className="text-slate-500 hover:text-slate-900 transition-colors duration-200 text-sm">Careers</a></li>
                 <li><a href="#" className="text-slate-500 hover:text-slate-900 transition-colors duration-200 text-sm">Press</a></li>
               </ul>
