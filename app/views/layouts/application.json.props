@@ -2,6 +2,16 @@ path = request.format.json? ? param_to_dig_path(params[:props_at]) : nil
 
 json.data(dig: path) do
   yield json
+  json.search do
+    json.results do
+      json.array! Project.search(params[:q]) do |project|
+        json.id project.id
+        json.name project.name
+        json.description project.description
+        json.url project_path(project)
+      end
+    end
+  end
 end
 
 json.componentIdentifier active_template_virtual_path
