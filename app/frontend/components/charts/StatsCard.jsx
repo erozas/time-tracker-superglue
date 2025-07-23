@@ -1,6 +1,10 @@
 import React from 'react'
+import { RefreshCcw } from 'lucide-react'
+import { useContent } from '@thoughtbot/superglue'
 
-export default function StatsCard({ title, value, subtitle, icon, color = "blue" }) {
+export default function StatsCard({ title, value, refresh = false, refreshPath, icon, color = "blue" }) {
+  const data = useContent().data.dashboard_data
+
   const backgroundColorClasses = {
     blue: "bg-dodger-200",
     green: "bg-emerald-200",
@@ -31,6 +35,12 @@ export default function StatsCard({ title, value, subtitle, icon, color = "blue"
           <h3 className="text-2xl font-bold text-gray-900">{value}</h3>
           <p className="text-sm font-medium text-gray-500">{title}</p>
         </div>
+        {refresh && (
+          <a href={refreshPath} className="ml-12 flex items-center space-x-2" data-sg-remote>
+            <RefreshCcw className="w-4 h-4 text-gray-500" />
+            <span className="text-sm font-medium text-gray-500">Refresh</span>
+          </a>
+        )}
       </div>
     </div>
   )
