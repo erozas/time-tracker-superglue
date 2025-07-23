@@ -11,7 +11,8 @@ import {
 
 export default function DashboardIndex() {
   const user = useSelector((state) => state.user)
-  const data = useContent().data.dashboard_data
+  const data = useContent().data
+  const stats = data.stats
 
   return (
     <AppLayout>
@@ -27,8 +28,10 @@ export default function DashboardIndex() {
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
               title="Hours This Month"
-              value={data.stats.total_hours_this_month}
+              value={stats.total_hours_this_month}
+              refreshPath="/dashboard?props_at=data.data.stats"
               subtitle="vs 148 last month"
+              refresh={true}
               icon={<Clock />}
               color="blue"
             />
@@ -36,7 +39,7 @@ export default function DashboardIndex() {
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
               title="Earnings This Month"
-              value={`$${data.stats.total_earnings_this_month.toLocaleString()}`}
+              value={`$${stats.total_earnings_this_month.toLocaleString()}`}
               subtitle="vs $7,200 last month"
               icon={<DollarSign />}
               color="green"
@@ -45,7 +48,7 @@ export default function DashboardIndex() {
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
               title="Active Projects"
-              value={data.stats.active_projects}
+              value={stats.active_projects}
               subtitle="3 due this week"
               icon={<Folder />}
               color="purple"
@@ -54,7 +57,7 @@ export default function DashboardIndex() {
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
               title="Avg. Hourly Rate"
-              value={`$${data.stats.average_hourly_rate}`}
+              value={`$${stats.average_hourly_rate}`}
               subtitle="+$5 from last month"
               icon={<TrendingUp />}
               color="yellow"
