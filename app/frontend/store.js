@@ -8,6 +8,7 @@ import {
   beforeRemote,
   rootReducer
 } from "@thoughtbot/superglue"
+import { pomodoroSlice } from "./slices/pomodoro"
 
 const { pages, superglue } = rootReducer
 
@@ -23,7 +24,8 @@ export const store = configureStore({
     superglue,
     pages,
     flash: flashSlice.reducer,
-    user: userSlice.reducer
+    user: userSlice.reducer,
+    pomodoro: pomodoroSlice.reducer
   }
 })
 
