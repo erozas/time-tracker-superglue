@@ -12,7 +12,7 @@ class DashboardController < ApplicationController
     # Generate realistic freelance time tracking data
     {
       stats: {
-        total_hours_this_month: 72,
+        total_hours_this_month: rand(100),
         total_earnings_this_month: 4050,
         active_projects: 3,
         average_hourly_rate: 65
