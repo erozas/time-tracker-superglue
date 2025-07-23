@@ -37,7 +37,7 @@ export default function AppSidebar() {
           </li>
           <li className="px-4 py-2 hover:bg-indigo-800">
             <a
-              href="/posts"
+              href="/dashboard/posts"
               data-sg-visit
               className="flex items-center py-2 text-indigo-200 rounded-lg transition-colors"
             >

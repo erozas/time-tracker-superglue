@@ -1,0 +1,5 @@
+path = param_to_dig_path(params[:props_at])
+
+json.data(dig: path) do
+  json.posts @posts
+end

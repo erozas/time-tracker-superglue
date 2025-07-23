@@ -36,6 +36,7 @@ import ProjectsNew from '../views/projects/new'
 import SessionsNew from '../views/sessions/new'
 import PostIndex from '../views/posts/index'
 import PostShow from '../views/posts/show'
+import DashboardPostsIndex from '../views/dashboard/posts/index'
 
 export const pageIdentifierToPageComponent = {
   "pages/home": Home,
@@ -45,4 +46,5 @@ export const pageIdentifierToPageComponent = {
   "projects/new": ProjectsNew,
   "posts/index": PostIndex,
   "posts/show": PostShow,
+  "dashboard/posts/index": DashboardPostsIndex,
 };

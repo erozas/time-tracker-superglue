@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resource :greet, only: [:show]
   resources :projects
   resources :dashboard, only: [:index]
+  get "dashboard/posts" => "dashboard/posts#index", as: :dashboard_posts
+  get "dashboard/posts/:id" => "dashboard/posts#show", as: :dashboard_post
   resources :posts, only: [:index, :new, :create]
 
   get "blog" => "posts#index", as: :blog
