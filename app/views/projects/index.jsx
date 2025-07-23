@@ -9,7 +9,7 @@ export default function ProjectsIndex() {
 
   return (
     <AppLayout>
-      <div className="px-8 mt-12 mb-20">
+      <div className="px-8 mt-6 mb-20">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold mb-4">Projects</h1>
           <a href={newProjectPath} data-sg-visit>New Project</a>
