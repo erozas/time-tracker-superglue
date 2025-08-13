@@ -11,7 +11,7 @@ import {
 
 export default function DashboardIndex() {
   const user = useSelector((state) => state.user)
-  const data = useContent().data
+  const data = useContent()
   const stats = data.stats
 
   return (
@@ -29,7 +29,7 @@ export default function DashboardIndex() {
             <StatsCard
               title="Hours This Month"
               value={stats.total_hours_this_month}
-              refreshPath="/dashboard?props_at=data.data.stats"
+              refreshPath="/dashboard?props_at=data.stats"
               subtitle="vs 148 last month"
               refresh={true}
               icon={<Clock />}

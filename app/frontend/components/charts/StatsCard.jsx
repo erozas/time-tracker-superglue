@@ -3,8 +3,6 @@ import { RefreshCcw } from 'lucide-react'
 import { useContent } from '@thoughtbot/superglue'
 
 export default function StatsCard({ title, value, refresh = false, refreshPath, icon, color = "blue" }) {
-  const data = useContent().data.dashboard_data
-
   const backgroundColorClasses = {
     blue: "bg-dodger-200",
     green: "bg-emerald-200",

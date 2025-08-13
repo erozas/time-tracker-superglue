@@ -1,24 +1,20 @@
-path = param_to_dig_path(params[:props_at])
+json.stats do
+  json.total_hours_this_month rand(100)
+  json.total_earnings_this_month 4050
+  json.active_projects 3
+  json.average_hourly_rate 65
+end
 
-json.data(dig: path) do
-  json.stats do
-    json.total_hours_this_month rand(100)
-    json.total_earnings_this_month 4050
-    json.active_projects 3
-    json.average_hourly_rate 65
+json.daily_hours do
+  json.array! @dashboard_data[:daily_hours] do |hour|
+    json.date hour[:date]
+    json.hours hour[:hours]
   end
+end
 
-  json.daily_hours do
-    json.array! @dashboard_data[:daily_hours] do |hour|
-      json.date hour[:date]
-      json.hours hour[:hours]
-    end
-  end
-
-  json.earnings_over_time do
-    json.array! @dashboard_data[:earnings_over_time] do |earning|
-      json.period earning[:period]
-      json.amount earning[:amount]
-    end
+json.earnings_over_time do
+  json.array! @dashboard_data[:earnings_over_time] do |earning|
+    json.period earning[:period]
+    json.amount earning[:amount]
   end
 end
