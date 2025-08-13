@@ -1,18 +1,39 @@
-json.stats do
-  json.total_hours_this_month rand(100)
-  json.total_earnings_this_month 4050
-  json.active_projects 3
-  json.average_hourly_rate 65
+json.hoursThisMonth do
+  json.title "Hours this Month"
+  json.value rand(100)
+  json.subtitle "vs 148 last month"
+  json.color "blue"
 end
 
-json.daily_hours do
+json.earningsThisMonth do
+  json.title "Earnings This Month"
+  json.value 4050
+  json.subtitle "vs $7,200 last month" 
+  json.color "green"
+end
+
+json.activeProjects do
+  json.title "Active Projects"
+  json.value 3
+  json.subtitle "3 due this week"
+  json.color "purple"
+end
+
+json.avgHourlyRate do
+  json.title "Avg. Hourly Rate"
+  json.value 65
+  json.subtitle "+$5 from last month"
+  json.color "yellow"
+end
+
+json.dailyHours do
   json.array! @dashboard_data[:daily_hours] do |hour|
     json.date hour[:date]
     json.hours hour[:hours]
   end
 end
 
-json.earnings_over_time do
+json.earningsOverTime do
   json.array! @dashboard_data[:earnings_over_time] do |earning|
     json.period earning[:period]
     json.amount earning[:amount]

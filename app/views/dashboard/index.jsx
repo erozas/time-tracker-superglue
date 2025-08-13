@@ -11,8 +11,14 @@ import {
 
 export default function DashboardIndex() {
   const user = useSelector((state) => state.user)
-  const data = useContent()
-  const stats = data.stats
+  const {
+    hoursThisMonth,
+    earningsThisMonth,
+    activeProjects,
+    avgHourlyRate,
+    dailyHours,
+    earningsOverTime
+  } = useContent()
 
   return (
     <AppLayout>
@@ -26,48 +32,36 @@ export default function DashboardIndex() {
         {/* Stats Cards */}
         <div className="grid grid-cols-12 w-full gap-x-6 gap-y-6 mb-8">
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
-            <StatsCard
-              title="Hours This Month"
-              value={stats.total_hours_this_month}
-              refreshPath="/dashboard?props_at=data.stats"
-              subtitle="vs 148 last month"
+            <StatsCard 
+              {...hoursThisMonth}
               refresh={true}
+              refreshPath="/dashboard?props_at=data.hoursThisMonth"
               icon={<Clock />}
-              color="blue"
             />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
-              title="Earnings This Month"
-              value={`$${stats.total_earnings_this_month.toLocaleString()}`}
-              subtitle="vs $7,200 last month"
+              {...earningsThisMonth}
               icon={<DollarSign />}
-              color="green"
             />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
-              title="Active Projects"
-              value={stats.active_projects}
-              subtitle="3 due this week"
+              {...activeProjects}
               icon={<Folder />}
-              color="purple"
             />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <StatsCard
-              title="Avg. Hourly Rate"
-              value={`$${stats.average_hourly_rate}`}
-              subtitle="+$5 from last month"
+              {...avgHourlyRate}
               icon={<TrendingUp />}
-              color="yellow"
             />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-6 mb-8">
-            <DailyHoursChart data={data.daily_hours} title="This Week's Hours" />
+            <DailyHoursChart data={dailyHours} title="This Week's Hours" />
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-6 mb-8">
-            <EarningsChart data={data.earnings_over_time} />
+            <EarningsChart data={earningsOverTime} />
           </div>
         </div>
       </div>
